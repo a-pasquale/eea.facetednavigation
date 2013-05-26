@@ -19,8 +19,12 @@
 
   <!-- Left & Center-->
   <div id="center-and-left-area">
+    <!-- Left column -->
+    <div tal:define="position string:left" id="left-area" class="span3">
+      <metal:position use-macro="here/@@faceted_macros/macros/position" />
+    </div>
     <!-- Center -->
-    <div id="center-area">
+    <div id="center-area" class="span8">
       <div id="center-content-area">
         <!-- Center top -->
         <div tal:define="position string:center" id="center-top-area">
@@ -37,10 +41,6 @@
       </div>
     </div>
 
-    <!-- Left column -->
-    <div tal:define="position string:left" id="left-area">
-      <metal:position use-macro="here/@@faceted_macros/macros/position" />
-    </div>
   </div>
 
   <!-- Right -->
