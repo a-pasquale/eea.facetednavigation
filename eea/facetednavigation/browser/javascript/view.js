@@ -239,6 +239,10 @@ Faceted.Form = {
           context.area.html(data);
           context.area.fadeIn(Faceted.Options.FADE_SPEED);
           jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_QUERY_SUCCESS);
+          $('.facetedResult a').prepOverlay({
+              subtype: 'ajax',
+              filter: '#portal-column-content > *',
+          });
         });
       });
     });
