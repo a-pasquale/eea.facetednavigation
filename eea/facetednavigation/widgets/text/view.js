@@ -76,6 +76,7 @@ Faceted.TextWidget.prototype = {
     }
 
     var input = jQuery('#' + this.wid);
+    input.attr('value', value);
     this.selected = [input];
   },
 
@@ -107,6 +108,7 @@ Faceted.TextWidget.prototype = {
     });
 
     var html = jQuery('<dt>');
+    html.attr('id', 'criteria_' + this.wid + '_label');
     html.append(link);
     html.append('<span>' + this.title + '</span>');
     return html;
@@ -124,15 +126,17 @@ Faceted.TextWidget.prototype = {
     jQuery.each(elements, function(){
       var label = this.toString();
       if(label.length>0){
-	      var link = jQuery('<a href="#">[X]</a>');
-	      link.attr('id', 'criteria_' + widget.wid + '_' + label);
-	      link.attr('title', 'Remove ' + label + ' filter');
-	      link.click(function(evt){
-	        widget.criteria_remove(label);
-	        return false;
-	      });
-	      html.append(link);
-	      html.append('<span>' + label + '</span>');
+          var span = jQuery('<span class="faceted-text-criterion">');
+          var link = jQuery('<a href="#">[X]</a>');
+          link.attr('id', 'criteria_' + widget.wid + '_' + label);
+          link.attr('title', 'Remove ' + label + ' filter');
+          link.click(function(evt){
+            widget.criteria_remove(label);
+            return false;
+          });
+          span.append(link);
+          span.append('<span>' + label + '</span>');
+          html.append(span);
       }
     });
     return html;

@@ -1,8 +1,34 @@
 Changelog
 =========
 
-5.6-dev - (unreleased)
+5.7-dev - (unreleased)
 ----------------------
+
+* Criteria entries are each in a span container.
+
+5.6 - (2013-05-20)
+------------------
+* Add ids to criteria filtering entries.
+  [thomasdesvenain]
+* Fix: Iterate on batch instead of folderContents in preview-items.pt
+  It previously loaded all objects instead of the only first 100 when no
+  criterion was given.
+  [vincentfretin]
+* Feature: Removed lovely.memcached dependency
+  [voineali refs #14343]
+* Change: Added id to <li> in checkbox widget.
+  [cedricmessiant]
+* Change: changed links for open and closed issues for facetednavigation to
+  point to taskman
+  [ichim-david]
+* Fix: Prevent whole select form from appearing if vocal is empty
+  [davismr]
+* Fix: Add labels for select and text field, fixes issues 29 and 30
+  [davismr]
+* Fix: text widget input immediately gets value set in the url as input value.
+  [thomasdesvenain]
+* Add an option to hide all/current alternative on text search widget.
+  [thomasdesvenain]
 
 5.5 - (2013-02-25)
 ------------------
