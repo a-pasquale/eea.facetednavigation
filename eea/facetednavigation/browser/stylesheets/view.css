@@ -1,6 +1,26 @@
 /* Stylesheet for the 'eea facetednavigation' */
 /*
 */
+
+.facetedResult { 
+  margin-bottom: 10px;
+}
+.facetedResultTitle {
+  font-family: 'Ubuntu',sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.1em;
+  letter-spacing: -0.05em;
+  color: rgb(26, 117, 186);
+}
+.facetedResultDescription {
+  font-family: 'Ubuntu',sans-serif;
+  font-size: 100%;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: rgb(65, 65, 65);
+}
+
 .faceted-noborder {
   background:transparent none repeat scroll 0 0;
   border: medium none;
@@ -12,7 +32,16 @@
   width: auto;
 }
 
-.faceted-widget {
+.faceted-widget input, .faceted-widget label {
+    float: left;
+}
+
+.faceted-textwidget-place-current, .faceted-textwidget-place-all {
+    clear: both;
+}
+
+.faceted-textwidget-place-current label, .faceted-textwidget-place-all label {
+    margin-left: 10px;
 }
 
 /* Areas
@@ -21,27 +50,16 @@
 }
 
 #center-and-left-area {
-  float: left;
-  margin-right: -25em;
-  width: 100%;
 }
 
 #right-area {
-  float: right;
-  width: 25em;
-  overflow: hidden;
 }
 
 #center-area {
-  float: right;
-  margin-left: -25em;
-  width: 100%;
+
 }
 
 #left-area {
-  float: left;
-  width: 25em;
-  overflow: hidden;
 }
 
 #center-top-area {
@@ -55,11 +73,9 @@
 }
 
 .right-area-js {
-  margin-right: 25em;
 }
 
 .left-area-js {
-  margin-left: 25em;
 }
 
 /* End Areas */
@@ -77,46 +93,44 @@
 }
 
 .faceted-left-column div.faceted-text-widget input[type=text] {
-  width: 99%;
+    width: auto;
 }
 
 .faceted-right-column div.faceted-text-widget input[type=text] {
-  width: 99%;
 }
 
 .faceted-left-column div.faceted-select-widget select{
-  width: 100%;
 }
 
 .faceted-right-column div.faceted-select-widget select{
-  width: 100%;
 }
 
 .faceted-left-column div.faceted-resultsperpage-widget select{
-  width: 100%;
 }
 
 .faceted-right-column div.faceted-resultsperpage-widget select{
-  width: 100%;
 }
 
 .faceted-left-column div.faceted-sorting-widget select{
-  width: 100%;
 }
 
 .faceted-right-column div.faceted-sorting-widget select{
-  width: 100%;
 }
 
 #faceted-form fieldset {
   margin: 0.5em;
   padding: 1em 0.5em 0.5em 0.5em;
   border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.widget-fieldset legend {
-  margin-bottom: 0.5em;
+#content .widget-fieldset legend {
+  margin-bottom: 0;
+  font-size: 150%;
   font-weight: bold;
+  border: 0;
+  width: auto;
+  line-height: 1em;
 }
 
 

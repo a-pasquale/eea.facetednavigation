@@ -1,4 +1,4 @@
-<div class="photoAlbumEntry"
+<div class="facetedResult"
   tal:define="portal_type context/portal_type;
               useViewTypes context/portal_properties/site_properties/typesUseViewActionInListings;
               useView python:portal_type in useViewTypes;">
@@ -24,8 +24,8 @@
       <img tal:replace="structure python:image_tag(scale='thumb', title=description)" />
     </span>
 
-    <span class="photoAlbumEntryTitle" tal:content="context/pretty_title_or_id|string:">Title</span>
-    <span class="photoAlbumEntryDescription" tal:content="description">Description</span>
+    <span class="facetedResultTitle" tal:content="context/pretty_title_or_id|string:">Title</span>
+    <span class="facetedResultDescription" tal:content="description">Description</span>
 
   </a>
 </div>
