@@ -13,18 +13,18 @@
      tal:attributes="href view_url;
                      title description">
 
-    <span class="photoAlbumEntryWrapper" tal:condition="image_thumb">
+    <div class="photoAlbumEntryWrapper" tal:condition="image_thumb">
       <img style="border: none" tal:attributes="
         title desc_or_title;
         src string:$url/@@images/lead_image/thumb"/>
-    </span>
+    </div>
 
-    <span class="photoAlbumEntryWrapper" tal:condition="python:not image_thumb and image_tag">
+    <div class="photoAlbumEntryWrapper" tal:condition="python:not image_thumb and image_tag">
       <img tal:replace="structure python:image_tag(scale='thumb', title=description)" />
-    </span>
+    </div>
 
-    <span class="facetedResultTitle" tal:content="context/pretty_title_or_id|string:">Title</span>
-    <span class="facetedResultDescription" tal:content="description">Description</span>
+    <div class="facetedResultTitle" tal:content="context/pretty_title_or_id|string:">Title</div>
+    <div class="facetedResultDescription" tal:content="description">Description</div>
 
   </a>
 </div>

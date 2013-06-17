@@ -4,6 +4,7 @@
 
 .facetedResult { 
   margin-bottom: 10px;
+  overflow: hidden;
 }
 .facetedResultTitle {
   font-family: 'Ubuntu',sans-serif;
@@ -20,7 +21,9 @@
   line-height: 1.5em;
   color: rgb(65, 65, 65);
 }
-
+.facetedResult img {
+    float: right;
+}
 .faceted-noborder {
   background:transparent none repeat scroll 0 0;
   border: medium none;
