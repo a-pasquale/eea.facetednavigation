@@ -4,5 +4,6 @@
 *.mo
 dist
 *.swp
+*.swo
 .project
 .pydevproject
