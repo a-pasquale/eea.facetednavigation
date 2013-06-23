@@ -8,7 +8,7 @@
       desc_or_title python:description or title;
       url context/absolute_url|string:#;
       view_url python:(url and useView and url + '/view') or url;
-      image_thumb exists:context/lead_image;
+      image_thumb exists:context/@@images/lead_image;
       image_tag python:getattr(context, 'tag', None)"
      tal:attributes="href view_url;
                      title description">
