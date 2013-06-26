@@ -187,6 +187,11 @@
     file="./javascript/independent.js"
    />
 
+  <browser:resource
+    name="jQuery.print.js"
+    file="./javascript/jQuery.print.js"
+   />
+
   <browser:resourceDirectory
     name="faceted_images"
     directory="./images" />

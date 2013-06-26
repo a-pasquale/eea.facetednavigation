@@ -242,6 +242,19 @@ Faceted.Form = {
           $('.facetedResult a').prepOverlay({
               subtype: 'ajax',
               filter: '#portal-column-content > *',
+              config: {
+                  onLoad : function (e) {
+                      $('#document-action-print a').on('click', function (e) {
+                          e.preventDefault();
+                          $('.pb-ajax').print({ 
+                              mediaPrint: true, 
+                              globalStyles: false, 
+                              stylesheet: 'https://portal.healthlens.org/print.css'
+                          });
+                      });
+                      return true;
+                  }
+              }
           });
         });
       });
