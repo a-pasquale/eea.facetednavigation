@@ -239,10 +239,11 @@ Faceted.Form = {
           context.area.html(data);
           context.area.fadeIn(Faceted.Options.FADE_SPEED);
           jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_QUERY_SUCCESS);
-          $('.facetedResult a').prepOverlay({
+          $('.facetedResult a, .portlet-collection-featured-article a, .portlet-collection-tip-of-the-day a').prepOverlay({
               subtype: 'ajax',
               filter: '#portal-column-content > *',
               config: {
+                  mask: '#000',
                   onLoad : function (e) {
                       $('#document-action-print a').on('click', function (e) {
                           e.preventDefault();
@@ -251,6 +252,12 @@ Faceted.Form = {
                               globalStyles: false, 
                               stylesheet: 'https://portal.healthlens.org/print.css'
                           });
+                      });
+                      $('a.link-category').on('click', function (e) {
+                          e.preventDefault();
+                          var tag = $(this).html();
+                          $('.overlay').overlay().close();
+                          window.location.href = '/knowledge-base#c6=' + tag;
                       });
                       return true;
                   }
