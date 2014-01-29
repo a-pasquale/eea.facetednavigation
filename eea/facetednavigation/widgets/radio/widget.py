@@ -9,9 +9,10 @@ from Products.Archetypes.public import IntegerWidget
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
 
+from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import CountableWidget
-from eea.facetednavigation import EEAMessageFactory as _
 
 
 EditSchema = Schema((
@@ -49,7 +50,7 @@ EditSchema = Schema((
         schemata="default",
         default=False,
         widget=BooleanWidget(
-            label=_(u'Hide "All" option'),
+            label=_(u"Hide 'All' option"),
             description=_(u'If this checkbox is checked, hides the All '
                           u'option'),
             i18n_domain="eea"
@@ -112,8 +113,7 @@ class Widget(CountableWidget):
         if not value:
             return query
 
-        if not isinstance(value, unicode):
-            value = value.decode('utf-8')
+        value = atdx_normalize(value)
 
-        query[index] = value.encode('utf-8')
+        query[index] = value
         return query

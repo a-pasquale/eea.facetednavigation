@@ -1,14 +1,83 @@
 Changelog
 =========
 
-6.0-dev - (unreleased)
+6.8-dev - (unreleased)
 ----------------------
+
+6.7 - (2014-01-29)
+------------------
+* Bug fix: Fix labels in "Current filters" widget
+  [avoinea]
+* Bug fix: Corrected 'Current filters' in Polish translation.
+  [prospchr]
+
+6.6 - (2014-01-21)
+------------------
+* Bug fix: Fix field default value rendering with chameleon,
+  avoiding use of 'default' name in tal, wich is a reserved keyword.
+  [thomasdesvenain]
+* Bug fix: Fix xml import of '0' values for boolean properties
+  which were considered as True.
+  [thomasdesvenain]
+* Feature: Add a new widget : BooleanWidget
+  We get a checkbox widget to filter contents
+  which gets a true boolean value for an index (FieldIndex or BooleanIndex).
+  [thomasdesvenain]
+* Bug fix: In search mode, search results were not kept when we go back.
+  [thomasdesvenain]
+* Feature: French translations updates.
+  [thomasdesvenain]
+* Bug fix: Added translations for 'Current filters'.
+  [prospchr]
+* Feature: Radio and checkbox widgets query for unicode or encoded strings
+  depending on the availability of plone.app.contenttypes. This is a
+  requirement to work with dexterity
+  [do3cc]
+* Feature: adding Sphinx-generated documentation in Page Template format
+  [batradav refs #9502]
+
+6.5 - (2013-11-20)
+------------------
+* Bug fix: fix url handling in settings menu
+  [kiorky]
+
+6.4 - (2013-10-25)
+------------------
+* Bug fix: Added 'Current filters' to plone-manual.pot and updated po files.
+  [prospchr]
+
+6.3 - (2013-10-04)
+------------------
+* Bug fix: Add sensical da translations
+  [tmog]
+
+6.2 - (2013-09-23)
+------------------
+* Feature: Option to disable inheriting the configuration from the canoical
+  language (only displayed when the object is not canonical).
+  [pbauer]
+
+6.1 - (2013-09-13)
+------------------
+* Bug fix: Allow using keywords with spaces in a radio-widget.
+  [pbauer]
+* Bug fix: Fixed adding path facet on faceted navigable objects that are default
+  views for their parents
+  [avoinea refs #33 github]
+* Feature: Slovak translation updates
+  [rlacko]
+
+6.0 - (2013-09-06)
+------------------
+* Feature: Possibility to make AND/OR operator within checkbox facet visible
+  for anonymous users
+  [voineali refs #16624]
 
 5.9 - (2013-08-09)
 ------------------
-- Date range error message is delegated so it can be overriden.
+* Date range error message is delegated so it can be overriden.
   [thomasdesvenain]
-- Updating feeds to use the syndication available in Plone 4.3
+* Updating feeds to use the syndication available in Plone 4.3
   [hman]
 
 5.8 - (2013-07-08)

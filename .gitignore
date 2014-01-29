@@ -8,3 +8,5 @@ dist
 .project
 .pydevproject
 *.un~
+searchindex.js
+search.html

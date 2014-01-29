@@ -14,6 +14,9 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
+msgid "Current filters"
+msgstr "Aktuelle filter"
+
 msgid "Current search"
 msgstr "Nåværende søk"
 
